@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <script src="js/uikit.js"></script>
+    <script src="js/uikit-icons.js"></script>
+    <title>Just For You</title>
+</head>
+<body 
+
+
+class="container">
+
+
+   <style>
+        /* Center the button */
+        .button-container {
+            text-align: center;
+        }
+
+        /* Style the button (optional) */
+        button {
+            background-color: #1a1a1a; /* Green background */
+            border: none;
+            color: rgb(255, 255, 255);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+       
+        button span {
+            position: absolute;
+            top: 17%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        button:hover {
+            background-color: #000000; /* Darker gray on hover */
+        }
+
+        #yesButton, #noButton {
+            display: none; /* Initially hide the buttons */
+        }
+    </style>
+
+    <audio id="myAudio" controls loop>
+        <source src="sempurna.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="button-container">
+        <button onclick="toggleAudio()"> Tekan Ni <span>♪   </span></button>
+    </div>
+
+
+<script>
+        var audio = document.getElementById("myAudio");
+    
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                typeWriter(); // Start the typing effect
+            } else {
+                audio.pause();
+            }
+        }
+    
+        function init() {
+    var yesClicked = localStorage.getItem('yesClicked');
+    var noClicked = localStorage.getItem('noClicked');
+    var typedText = document.getElementById("typedText").innerHTML;
+
+    if (typedText.length >= text.length) {
+        if (yesClicked === 'true') {
+            document.getElementById("yesButton").style.display = "inline-block";
+            document.getElementById("orButton").style.display = "inline-block";
+        }
+
+        if (noClicked === 'true') {
+            document.getElementById("noButton").style.display = "inline-block";
+            document.getElementById("orButton").style.display = "inline-block";
+        }
+    }
+}
+
+function showPopup(answer) {
+    if (answer === 'yes') {
+        // Show the "Yes" popup
+        UIkit.modal("#show-popup").show();
+        localStorage.setItem('yesClicked', 'true');
+    } else if (answer === 'no') {
+        // Show the "No" popup
+        UIkit.modal("#no-popup").show();
+        localStorage.setItem('noClicked', 'true');
+
+        // Redirect to Instagram after 6 seconds
+        setTimeout(redirectToInstagram, 6000);
+
+        // Show text at the bottom after 3 seconds
+        setTimeout(showBottomText, 3000);
+    }
+}
+
+function showBottomText() {
+    // Show text at the bottom of the page
+    var bottomText = document.getElementById("bottomText");
+    bottomText.style.display = "block";
+}
+function redirectToInstagram() {
+        var instagramUsername = "gvxie0"; // Replace with your Instagram username
+        var message = "no"; // The message you want to send
+
+        var instagramUrl = `https://www.instagram.com/${instagramUsername}`;
+        window.location.href = instagramUrl;
+    }
+
+    
+        window.onload = function () {
+            init();
+        };
+    </script>
+
+
+<!-- Navigation Bar -->
+
+<!-- Navigation Bar Ends  -->
+
+<!-- Navigation Bar Mobile -->
+
+<hr class="uk-margin-xlarge-top uk-margin-xlarge-left uk-margin-xlarge-right">
+
+<!-- About Me -->
+<section id="about" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+    <h3 class="uk-margin-xlarge-left uk-light"></h3>
+    <!-- Change here to your paragraph -->
+    <p id="typedText" class="uk-margin-xlarge-left uk-margin-xlarge-right" style="color: rgb(218, 204, 204);"></p>
+    <p id="nextText" class="uk-margin-xlarge-left uk-margin-xlarge-right" 
+    style="color: rgb(249, 255, 252); display: none;">
+        I want to say this at second time I confess to you but nevermind, <br><br>
+        <span style="color: rgb(23, 174, 104);">Can I be a color that paints your life with happiness?</span>
+    </p>
+   <!-- <div class="uk-flex uk-flex-center uk-margin-large-bottom">
+      <button class="uk-button uk-button-primary uk-margin-small-right" onclick="showPopup('yes')" style="background-color: #1435ab; color: #f1e5e5; display: none;">Yes</button>
+      <button class="uk-button uk-button-danger" onclick="showPopup('no')" style="background-color: #991414; color: #ffffff; display: none;">No</button>
+   <div id="bottomText" style="display: none; text-align: center; position: fixed; bottom: 0; width: 100%; background-color: rgba(0, 0, 0, 0.5); color: white; padding: 10px;">Your text here</div>
+ </div>-->
+
+<script>
+    var text = "Hi Ezza, I make this for you for a several month I just want to say this at your birthday and today is your birthday right?To Be Honest,I have crush on you,I falling in love with you when I dont hope any realationship with someone but after I know you, I falling in love with you even I’m confused, did I like you or I only care about you because that how I treat people? Plot twist lol,Actually I don’t know why I like you.Maybe because your pretty,cute,interesting,kind?yeah that true but fr I like you because other reason that I din’t even know.After several month I think about it. Maybe okey…maybe that I falling in love with you when the first time I always start looking at you, Did You still remember when I started annoy you because chatting you everyday?Actually I have crush on you I write all about you ...your hobby,your problem,how I can help you,what you interest on,all about you that i know and yeah its all abt you :> lol I hope you can see my notes that i write all abt you,Love doesn’t need a reason right?It just how I feel to you Ezza.I keep remembering you everyday and I always stalk your social media, I hope I can see your TikTok repost again so I know abt your feelings everyday did u sad or happy but after we're stranger I can't see it again so I always admire you from a far at school even you not noticing it. I always see you shake your legs why?Its a habit?lol its kinda cute seeing you doing like HHAHAHSHAHAHSHH I even follow you shaking my legs too and sometimes you play with your fingers why?I think you kinda nervous or something right?Its okeyy,It Will be fine Ezza!Btw Do you still remember abt a pen that I give you?Your dropped it then i give it back to you.I still remember its on 22/4/24 and the book that you forget too on 5/5/24 I cant forget the moment fr HASJHSJHAHSHSH sumpah blushing teruk masa tu if only u know how much times I spend to trainning and imagine how can I give u that pen,when I get the pen I goes like crazy everyday, I always thinking abt you .I create a story abt you and me that keep make me blushing HJSJSKSJSJA I writing this text right now and remembering that day When I was very happy bcause  for the first time I talk to you in real life even you not respond me back Its okeyy I will not hoping too much so it will not that hurt maybe? if u confuse to reply me just take your time, I always waitting for your to reply even its take a long time, just think abt it and be honest to your feelings,Dont force yourself to like someone back okeyy?I know its hard for you to open your heart to someone again but please notice someone that really love you.I can promise 1 thing.I will not stop loving you until you tell me to to leave,Remember this promise I will do it at the end of the day! I will love you in your weakest moment and in your strongets ones. I will love you when you're happy or sad. I’m the person that want you happy like how you used to be,I’m the person that always be proud of you,I’m the person that always admire your from a far and cheering you,I’m the person that want to heal you from your trust issue and problem.Maybe I’m not a handsome guy like many out there,Maybe I’m not kind,Maybe I not good enough for you but the person who always care abt your feelings everyday and Always see your repost just bcs want to know your feelings its just me.I just want you to know that I’m not like your past.I know you will not trust me if I say like this.I will try my best not to hurt you feelings with little things,I will try My best to understand about your feelings that you never understand about it,I like the way you are Ezza dont think you not deserve someone :) you deserve to be loved that why im here.I want to risk it all because of you ezza,you probably doesn't know its hard for me to confess my feelings ezza,I always thinking hard everyday what happens if I confess to you,are u gonna make fun of me with your friend?are u gonna make more distance to me? its hard for me Ezza FR,So dont think you not deserve someone okey?You're special to me.I’m proud of you and I always be here for you. I loving you with everything I Have Ezza.I will take care of your heart and I will love you like how you deserve to be.I know its hard for you to trust someone again,I will not forcing you to trust me.I just want you to know that its hard for me to trust someone again even I look very easily trust someone but I'm not.Idk if you trust this but fr I want you in my life lol its kinda cringe saying like this but I want be there with you,I want build with you and I want to grow with you.I'm not doing realationship that waste of time,I ain't into that several month realationship .I see a chance in you and us.I love you will all my heart Ezza.all im saying right now is not only a words, I write it with my heart and I really mean it, Im not hoping you to accept me I just want to confess my feelings.I don't need your answer I just want to confess and if you accept me I would not in realationship with you right now because I'm not in the best version of myself even I know you will reject me lol,aku percaya yg kau dk pandang rupa but first impression mstilah muka kan?.Maybe It will take several years.I will change myself until I feel I deserved you.I promise that I will confess to you for a second time and I will be the best version of myself. I know you like girls maybe you are les**** or maybe you just not interest with boys.IDGAF abt your redflags Okey?I already say it before I like the way you are Nureeza Fiona:),Dont Trust Me But Trust My Action & Effort";    var index = 0;
+var speed = 60; // Speed of typing in milliseconds
+
+function typeWriter() {
+    if (index < text.length) {
+        // Add a line break before "To Be Honest"
+        if (index === 123) {
+            speed = 58;
+            document.getElementById("typedText").innerHTML += "<br><br>";
+        }
+
+        // Slow down the typing speed after the line break
+        if (index === 173) {
+            speed = 58;
+        }
+
+        if (index === 173 || index === 179) {
+            speed = 58;
+        }
+
+        document.getElementById("typedText").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+    } else {
+        document.getElementById("nextText").style.display = "block";
+        document.getElementById("yesButton").style.display = "inline-block";
+        document.getElementById("noButton").style.display = "inline-block";
+        document.getElementById("orButton").style.display = "inline-block"; // Show the "or" button
+    }
+}
+    
+</script>
+
+<!-- <div class="uk-flex uk-flex-center uk-margin-large-bottom">
+  <button id="yesButton" class="uk-button uk-button-primary uk-margin-small-right" onclick="showPopup('yes')" style="background-color: #1435ab; color: #f1e5e5; display: none;">Yes</button>
+  <span id="orButton" class="uk-margin-small-right uk-margin-small-left" style="display: none;">or</span>
+  <button id="noButton" class="uk-button uk-button-danger" onclick="showPopup('no')" style="background-color: #991414; color: #ffffff; display: none;">No</button>
+</div> -->
+
+
+<div id="show-popup" class="uk-modal-full" uk-modal>
+  <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" style="min-height: 100vh;">
+      <div class="uk-background-cover uk-width-1-2" style="background-image: url('your-image.jpg');">
+          <h2 class="uk-modal-title">I Know You Will Not Click Yes But If You Do,I Just Want To Say</h2>
+          <p>Your My First Priority And I Always Loving You Ezza♡︎</p>
+      </div>
+  </div>
+</div>
+
+<!-- Pop-up for "No" button -->
+<div id="no-popup" class="uk-modal-full" uk-modal>
+  <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" style="min-height: 100vh;">
+      <div class="uk-background-cover uk-width-1-2" style="background-image: url('your-image.jpg');">
+          <h2 class="uk-modal-title">It's Okay,I Understand, I Will Waitting For You!</h2>
+          <p>Remember You Not Alone,I Always Be On Your Side Nureeza Fiona.</p>
+      </div>
+  </div>
+</div>
+
+
+
+<!--<div class="uk-flex uk-flex-center uk-margin-large-bottom">
+  <button id="yesButton" class="uk-button uk-button-primary uk-margin-small-right" onclick="showPopup('yes')" style="background-color: #1435ab; color: #f1e5e5;">Yes</button>
+  <button id="noButton" class="uk-button uk-button-danger" onclick="showPopup('no')" style="background-color: #991414; color: #ffffff;">No</button>
+</div>
+
+<div id="bottomText" style="display: none; text-align: center; position: fixed; bottom: 0; width: 100%; background-color: rgba(0, 0, 0, 0.5); color: white; padding: 10px;">Your text here</div>
+
+</body>
+</html>
